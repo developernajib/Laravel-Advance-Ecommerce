@@ -37,7 +37,7 @@ class UserController extends Controller
 {
     public function index(){
         $blogpost = BlogPost::latest()->get();
-    	$products = Product::where('status',1)->orderBy('id','ASC')->limit(10)->get();
+    	$products = Product::where('status',1)->orderBy('id','DESC')->limit(10)->get();
     	$sliders = Slider::where('status',1)->orderBy('id','ASC')->limit(4)->get();
     	$categories = Category::orderBy('category_name_en','ASC')->get();
     	$featured = Product::where('featured',1)->orderBy('id','DESC')->limit(6)->get();
@@ -50,7 +50,7 @@ class UserController extends Controller
     	$skip_product_1 = Product::where('status',1)->where('category_id',$skip_category_1->id)->orderBy('id','DESC')->get();
     	$skip_brand_1 = Brand::skip(1)->first();
     	$skip_brand_product_1 = Product::where('status',1)->where('brand_id',$skip_brand_1->id)->orderBy('id','DESC')->get();
-		$data = Product::paginate(12);
+		$data = Product::orderBy('id','DESC')->get();
         
     	return view('frontend.index',compact('categories','sliders','products','featured','hot_deals','special_offer','special_deals','skip_category_0','skip_product_0','skip_category_1','skip_product_1','skip_brand_1','skip_brand_product_1','blogpost', 'data'));
     }

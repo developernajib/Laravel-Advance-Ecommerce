@@ -170,7 +170,7 @@
                                 </div>
                                 <div class="price-container info-container m-t-20">
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-12">
                                             <div class="price-box">
                                                 @if ($product->discount_price == null)
                                                     <span class="price">${{ $product->selling_price }}</span>
@@ -179,22 +179,6 @@
 
                                                     <span class="price-strike">${{ $product->selling_price }}</span>
                                                 @endif
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="favorite-button m-t-10">
-                                                <a class="btn btn-primary" data-toggle="tooltip"
-                                                    data-placement="right" title="Wishlist" href="#">
-                                                    <i class="fa fa-heart"></i>
-                                                </a>
-                                                <a class="btn btn-primary" data-toggle="tooltip"
-                                                    data-placement="right" title="Add to Compare" href="#">
-                                                    <i class="fa fa-signal"></i>
-                                                </a>
-                                                <a class="btn btn-primary" data-toggle="tooltip"
-                                                    data-placement="right" title="E-mail" href="#">
-                                                    <i class="fa fa-envelope"></i>
-                                                </a>
                                             </div>
                                         </div>
                                     </div>

@@ -36,7 +36,21 @@
                                 </tr>
                             </thead><!-- /thead -->
                             <tbody id="cartPage">
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">
+										<img src="{{ asset('/upload/products/thambnail/1740250181275645.jpg') }}"
+                                            style="width: 100px; height: 150px;">
+									</td>
+									<td class="text-center">Yamaha MT 15</td>
+									<td class="text-center">Red</td>
+									<td class="text-center"></td>
+									<td class="text-center">1</td>
+									<td class="text-center">3299</td>
+									<td class="text-center" style="cursor: pointer">X</td>
 
+                                </tr>
+                            </tbody>
                             </tbody>
                         </table>
                     </div>
@@ -77,7 +91,6 @@
                         </table><!-- /table -->
                     @endif
 
-
                 </div><!-- /.estimate-ship-tax -->
 
 
@@ -102,21 +115,8 @@
                         </tbody><!-- /tbody -->
                     </table><!-- /table -->
                 </div><!-- /.cart-shopping-total -->
-
-
-
-
-
-
-
-
-
-
             </div><!-- /.row -->
         </div><!-- /.sigin-in-->
-
-
-
         <br>
         @include('frontend.body.brands')
     </div>

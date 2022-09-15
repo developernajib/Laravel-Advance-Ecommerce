@@ -46,12 +46,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
-                    @php
+                    {{-- @php
                         $setting = App\Models\SiteSetting::find(1);
                     @endphp
-                    {{-- <div class="logo"> <a href="{{ url('/') }}"> <img src="{{ asset($setting->logo) }}"
-                                alt="logo"> </a> </div> --}}
-                    <!-- /.logo -->
+                    <div class="logo"> <a href="{{ url('/') }}"> <img src="{{ asset($setting->logo) }}"
+                                alt="logo"> </a> </div>
+                    <!-- /.logo --> --}}
                 </div>
                 <!-- /.logo-holder -->
                 <div class="col-xs-12 col-sm-12 col-md-7 top-search-holder">
@@ -195,13 +195,6 @@
                                                             </div>
                                                             <!-- /.col -->
                                                         @endforeach
-                                                        <!-- // End SubCategory Foreach -->
-                                                        {{-- <div class="col-xs-12 col-sm-6 col-md-4 col-menu banner-image">
-                                                            <img class="img-responsive"
-                                                                src="{{ asset('frontend/assets/images/banners/top-menu-banner.jpg') }}"
-                                                                alt="">
-                                                        </div> --}}
-                                                        <!-- /.yamm-content -->
                                                     </div>
                                                 </div>
                                             </li>

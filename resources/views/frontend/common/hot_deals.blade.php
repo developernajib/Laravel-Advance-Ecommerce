@@ -31,28 +31,6 @@
                                  <div class="sale-offer-tag"><span>{{ round($discount) }}%<br>
                                          off</span></div>
                              @endif
-
-
-
-
-                             <div class="timing-wrapper">
-                                 <div class="box-wrapper">
-                                     <div class="date box"> <span class="key">120</span> <span
-                                             class="value">DAYS</span> </div>
-                                 </div>
-                                 <div class="box-wrapper">
-                                     <div class="hour box"> <span class="key">20</span> <span
-                                             class="value">HRS</span> </div>
-                                 </div>
-                                 <div class="box-wrapper">
-                                     <div class="minutes box"> <span class="key">36</span> <span
-                                             class="value">MINS</span> </div>
-                                 </div>
-                                 <div class="box-wrapper hidden-md">
-                                     <div class="seconds box"> <span class="key">60</span> <span
-                                             class="value">SEC</span> </div>
-                                 </div>
-                             </div>
                          </div>
                          <!-- /.hot-deal-wrapper -->
 
@@ -80,9 +58,9 @@
                          <div class="cart clearfix animate-effect">
                              <div class="action">
                                  <div class="add-cart-button btn-group">
-                                     <button class="btn btn-primary icon" data-toggle="dropdown" type="button"> <i
+                                     <button class="btn btn-primary icon" data-toggle="dropdown" type="button" onclick="productView(this.id)"> <i
                                              class="fa fa-shopping-cart"></i> </button>
-                                     <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+                                     <button class="btn btn-primary cart-btn" type="button" onclick="productView(this.id)">Add to cart</button>
                                  </div>
                              </div>
                              <!-- /.action -->
