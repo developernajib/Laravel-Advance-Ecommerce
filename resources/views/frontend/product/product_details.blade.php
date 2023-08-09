@@ -15,48 +15,7 @@
             <div class='col-md-3 sidebar'>
                 <div class="sidebar-module-container">
                     @include('frontend.common.hot_deals')
-                    <div class="sidebar-widget newsletter wow fadeInUp outer-bottom-small outer-top-vs">
-                        <h3 class="section-title">Newsletters</h3>
-                        <div class="sidebar-widget-body outer-top-xs">
-                            <p>Sign Up for Our Newsletter!</p>
-                            <form>
-                                <div class="form-group">
-                                    <label class="sr-only" for="exampleInputEmail1">Email address</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1"
-                                        placeholder="Subscribe to our newsletter">
-                                </div>
-                                <button class="btn btn-primary">Subscribe</button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="sidebar-widget  wow fadeInUp outer-top-vs ">
-                        <div id="advertisement" class="advertisement">
-                            <div class="item">
-                                <div class="avatar"><img
-                                        src="{{ asset('frontend/assets/images/testimonials/member1.png') }} "
-                                        alt="Image"></div>
-                                <div class="testimonials"><em>"</em> Vtae sodales aliq uam morbi non sem lacus port
-                                    mollis. Nunc condime tum metus eud molest sed consectetuer.<em>"</em></div>
-                                <div class="clients_author">John Doe <span>Abc Company</span> </div>
-                            </div>
-                            <div class="item">
-                                <div class="avatar"><img
-                                        src="{{ asset('frontend/assets/images/testimonials/member3.png') }} "
-                                        alt="Image"></div>
-                                <div class="testimonials"><em>"</em>Vtae sodales aliq uam morbi non sem lacus port
-                                    mollis. Nunc condime tum metus eud molest sed consectetuer.<em>"</em></div>
-                                <div class="clients_author">Stephen Doe <span>Xperia Designs</span> </div>
-                            </div>
-                            <div class="item">
-                                <div class="avatar"><img
-                                        src="{{ asset('frontend/assets/images/testimonials/member2.png') }} "
-                                        alt="Image"></div>
-                                <div class="testimonials"><em>"</em> Vtae sodales aliq uam morbi non sem lacus port
-                                    mollis. Nunc condime tum metus eud molest sed consectetuer.<em>"</em></div>
-                                <div class="clients_author">Saraha Smith <span>Datsun &amp; Co</span> </div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
             <div class='col-md-9'>
@@ -474,30 +433,7 @@
                                                 </div><!-- /.product-price -->
                                             @endif
                                         </div><!-- /.product-info -->
-                                        <div class="cart clearfix animate-effect">
-                                            <div class="action">
-                                                <ul class="list-unstyled">
-                                                    <li class="add-cart-button btn-group">
-                                                        <button class="btn btn-primary icon" data-toggle="dropdown"
-                                                            type="button">
-                                                            <i class="fa fa-shopping-cart"></i>
-                                                        </button>
-                                                        <button class="btn btn-primary cart-btn" type="button">Add to
-                                                            cart</button>
-                                                    </li>
-                                                    <li class="lnk wishlist">
-                                                        <a class="add-to-cart" href="detail.html" title="Wishlist">
-                                                            <i class="icon fa fa-heart"></i>
-                                                        </a>
-                                                    </li>
-                                                    <li class="lnk">
-                                                        <a class="add-to-cart" href="detail.html" title="Compare">
-                                                            <i class="fa fa-signal"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div><!-- /.action -->
-                                        </div><!-- /.cart -->
+
                                     </div><!-- /.product -->
                                 </div><!-- /.products -->
                             </div><!-- /.item -->
@@ -508,6 +444,5 @@
             <div class="clearfix"></div>
         </div><!-- /.row -->
     </div>
-    <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e4b85f98de5201f"></script>
 @endsection

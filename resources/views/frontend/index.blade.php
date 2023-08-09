@@ -83,21 +83,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="sidebar-widget newsletter wow fadeInUp outer-bottom-small">
-                    <h3 class="section-title">Newsletters</h3>
-                    <div class="sidebar-widget-body outer-top-xs">
-                        <p>Sign Up for Our Newsletter!</p>
-                        <form>
-                            <div class="form-group">
-                                <label class="sr-only" for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                    placeholder="Subscribe to our newsletter">
-                            </div>
-                            <button class="btn btn-primary">Subscribe</button>
-                        </form>
-                    </div>
-                </div>
-                @include('frontend.common.testimonials')
+
             </div>
             <div class="col-xs-12 col-sm-12 col-md-9 homebanner-holder">
                 <div id="hero">
@@ -168,17 +154,15 @@
                                                         <div class="action">
                                                             <ul class="list-unstyled">
                                                                 <li class="add-cart-button btn-group">
-                                                                    <button class="btn btn-primary icon"
-                                                                        type="button" title="Add Cart"
-                                                                        data-toggle="modal"
+                                                                    <button class="btn btn-primary icon" type="button"
+                                                                        title="Add Cart" data-toggle="modal"
                                                                         data-target="#exampleModal"
                                                                         id="{{ $product->id }}"
-                                                                        onclick="productView(this.id)"> Add to Cart </button>
+                                                                        onclick="productView(this.id)"> Add to Cart
+                                                                    </button>
 
-                                                                    <button class="btn btn-primary cart-btn"
-                                                                        type="button">Add to cart</button>
+
                                                                 </li>
-                                                                
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -248,13 +232,10 @@
                                                                             data-toggle="modal"
                                                                             data-target="#exampleModal"
                                                                             id="{{ $product->id }}"
-                                                                            onclick="productView(this.id)"> <i
-                                                                                class="fa fa-shopping-cart"></i>
+                                                                            onclick="productView(this.id)"> Add to
+                                                                            Cart</i>
                                                                         </button>
-                                                                        <button class="btn btn-primary cart-btn"
-                                                                            type="button">Add to cart</button>
                                                                     </li>
-                                                                    
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -270,24 +251,6 @@
                         @endforeach
                     </div>
                 </div>
-                <div class="wide-banners wow fadeInUp outer-bottom-xs">
-                    <div class="row">
-                        <div class="col-md-7 col-sm-7">
-                            <div class="wide-banner cnt-strip">
-                                <div class="image"> <img class="img-responsive"
-                                        src="{{ asset('frontend/assets/images/banners/home-banner1.jpg') }}"
-                                        alt=""> </div>
-                            </div>
-                        </div>
-                        <div class="col-md-5 col-sm-5">
-                            <div class="wide-banner cnt-strip">
-                                <div class="image"> <img class="img-responsive"
-                                        src="{{ asset('frontend/assets/images/banners/home-banner2.jpg') }}"
-                                        alt=""> </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <section class="products">
@@ -297,12 +260,11 @@
                     
                         <div class="col-lg-2 col-md-3 col-sm-6">
                             <div style="position: absolute">
-                                @if ($data->discount_price == null)
+                                @if ($product->discount_price == null)
                                     <div class="tag new"><span>new</span></div>
                                 @else
-                                    <div class="tag hot">
-                                        <span>{{ round($discount) }}%</span>
-                                    </div>
+                                    <div class="tag hot"><span>{{ round($discount) }}%</span></div>
+
                                 @endif
                             </div>
                             <div class="product-item">
@@ -310,7 +272,6 @@
                                     href="{{ url('product/details/' . $product->id . '/' . $product->product_slug_en) }}"><img
                                         style="height:250px;width:95%;" src="{{ $product->product_thambnail }}"
                                         alt=""></a>
-                                        
                                 <div class="down-content" style="margin-bottom:30px;">
                                     <a href={{ $product->id }}>
                                         <h4>{{ $product->product_name_en }}</h4>

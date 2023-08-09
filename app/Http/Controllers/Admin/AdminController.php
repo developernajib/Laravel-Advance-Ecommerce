@@ -58,11 +58,9 @@ class AdminController extends Controller
         ]));
     }
 
-    public function destroy(Request $request): LogoutResponse{
-        $this->guard->logout();
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
-        return app(LogoutResponse::class);
+    public function destroy(){
+        Auth::logout();
+        return redirect()->route('loginForm');
     }
     
 }

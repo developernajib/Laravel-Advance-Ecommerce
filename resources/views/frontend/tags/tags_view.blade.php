@@ -14,9 +14,6 @@
                 @include('frontend.common.vertical_menu')
                 <!-- = ==== TOP NAVIGATION : END === ===== -->
 
-
-
-
                 <div class="sidebar-module-container">
                     <div class="sidebar-filter">
                         <!-- ============================================== SIDEBAR CATEGORY ============================================== -->
@@ -64,26 +61,11 @@
                                         </div>
                                         <!-- /.accordion-group -->
                                     @endforeach
-
-
-
-
-
-
-
-
-
-
-
                                 </div>
                                 <!-- /.accordion -->
                             </div>
                             <!-- /.sidebar-widget-body -->
                         </div>
-                        <!-- /.sidebar-widget -->
-                        <!-- ============================================== SIDEBAR CATEGORY : END ============================================== -->
-
-                        <!-- ============================================== PRICE SILDER============================================== -->
                         <div class="sidebar-widget wow fadeInUp">
                             <div class="widget-header">
                                 <h4 class="widget-title">Price Slider</h4>
@@ -101,9 +83,6 @@
                             </div>
                             <!-- /.sidebar-widget-body -->
                         </div>
-                        <!-- /.sidebar-widget -->
-                        <!-- ============================================== PRICE SILDER : END ============================================== -->
-                        <!-- ============================================== MANUFACTURES============================================== -->
                         <div class="sidebar-widget wow fadeInUp">
                             <div class="widget-header">
                                 <h4 class="widget-title">Manufactures</h4>
@@ -121,9 +100,6 @@
                             </div>
                             <!-- /.sidebar-widget-body -->
                         </div>
-                        <!-- /.sidebar-widget -->
-                        <!-- ============================================== MANUFACTURES: END ============================================== -->
-                        <!-- ============================================== COLOR============================================== -->
                         <div class="sidebar-widget wow fadeInUp">
                             <div class="widget-header">
                                 <h4 class="widget-title">Colors</h4>
@@ -140,9 +116,6 @@
                             </div>
                             <!-- /.sidebar-widget-body -->
                         </div>
-                        <!-- /.sidebar-widget -->
-                        <!-- ============================================== COLOR: END ============================================== -->
-                        <!-- == ======= COMPARE==== ==== -->
                         <div class="sidebar-widget wow fadeInUp outer-top-vs">
                             <h3 class="section-title">Compare products</h3>
                             <div class="sidebar-widget-body">
@@ -153,26 +126,7 @@
                             </div>
                             <!-- /.sidebar-widget-body -->
                         </div>
-                        <!-- /.sidebar-widget -->
-                        <!-- ============================================== COMPARE: END ============================================== -->
-
-
-                        <!-- == ====== PRODUCT TAGS ==== ======= -->
                         @include('frontend.common.product_tags')
-                        <!-- /.sidebar-widget -->
-                        <!-- == ====== END PRODUCT TAGS ==== ======= -->
-
-
-
-
-
-
-                        <!----------- Testimonials------------->
-
-                        @include('frontend.common.testimonials')
-                        <!-- == ========== Testimonials: END ======== ========= -->
-
-
                     </div>
                     <!-- /.sidebar-filter -->
                 </div>
@@ -371,34 +325,12 @@
                                         </div>
                                         <!-- /.item -->
                                     @endforeach
-
-
-
-
-
-
-
-
-
-
-
                                 </div>
                                 <!-- /.row -->
                             </div>
                             <!-- /.category-product -->
 
                         </div>
-                        <!-- /.tab-pane -->
-
-                        <!--            //////////////////// END Product Grid View  ////////////// -->
-
-
-
-
-                        <!--            //////////////////// Product List View Start ////////////// -->
-
-
-
                         <div class="tab-pane " id="list-container">
                             <div class="category-product">
 
@@ -500,18 +432,6 @@
                                     </div>
                                     <!-- /.category-product-inner -->
                                 @endforeach
-
-
-
-                                <!--            //////////////////// Product List View END ////////////// -->
-
-
-
-
-
-
-
-
                             </div>
                             <!-- /.category-product -->
                         </div>
@@ -605,27 +525,4 @@
     <!-- /.container -->
 
 </div>
-<!-- /.body-content -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @endsection

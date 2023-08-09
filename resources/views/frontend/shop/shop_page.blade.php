@@ -24,7 +24,6 @@
 
                     <div class="sidebar-module-container">
                         <div class="sidebar-filter">
-                            <!-- ============================================== SIDEBAR CATEGORY ============================================== -->
                             <div class="sidebar-widget wow fadeInUp">
                                 <h3 class="section-title">shop by</h3>
 
@@ -60,37 +59,10 @@
 
 
                                                 </div>
-                                                <!-- /.accordion-heading -->
-
-
                                             </div>
-                                            <!-- /.accordion-group -->
                                         @endforeach
-
-
-
-
-
-
-
-
-
-
-
                                     </div>
-                                    <!-- /.accordion -->
                                 </div>
-                                <!-- /.sidebar-widget-body -->
-
-                                <!-- /.sidebar-widget -->
-
-
-
-
-                                <!--  /////////// This is for Brand Filder /////////////// -->
-
-
-
                                 <div class="widget-header">
                                     <h4 class="widget-title">Brand Filter</h4>
                                 </div>
@@ -127,30 +99,11 @@
                                             <!-- /.accordion-group -->
                                         @endforeach
 
-
-
-
-
                                     </div>
                                     <!-- /.accordion -->
                                 </div>
                                 <!-- /.sidebar-widget-body -->
                             </div>
-                            <!-- /.sidebar-widget -->
-
-
-
-
-
-
-
-
-
-
-
-                            <!-- ============================================== SIDEBAR CATEGORY : END ============================================== -->
-
-                            <!-- ============================================== PRICE SILDER============================================== -->
                             <div class="sidebar-widget wow fadeInUp">
                                 <div class="widget-header">
                                     <h4 class="widget-title">Price Slider</h4>
@@ -168,9 +121,6 @@
                                 </div>
                                 <!-- /.sidebar-widget-body -->
                             </div>
-                            <!-- /.sidebar-widget -->
-                            <!-- ============================================== PRICE SILDER : END ============================================== -->
-                            <!-- ============================================== MANUFACTURES============================================== -->
                             <div class="sidebar-widget wow fadeInUp">
                                 <div class="widget-header">
                                     <h4 class="widget-title">Manufactures</h4>
@@ -188,9 +138,6 @@
                                 </div>
                                 <!-- /.sidebar-widget-body -->
                             </div>
-                            <!-- /.sidebar-widget -->
-                            <!-- ============================================== MANUFACTURES: END ============================================== -->
-                            <!-- ============================================== COLOR============================================== -->
                             <div class="sidebar-widget wow fadeInUp">
                                 <div class="widget-header">
                                     <h4 class="widget-title">Colors</h4>
@@ -207,39 +154,15 @@
                                 </div>
                                 <!-- /.sidebar-widget-body -->
                             </div>
-                            <!-- /.sidebar-widget -->
-                            <!-- ============================================== COLOR: END ============================================== -->
-                            <!-- == ======= COMPARE==== ==== -->
                             <div class="sidebar-widget wow fadeInUp outer-top-vs">
                                 <h3 class="section-title">Compare products</h3>
                                 <div class="sidebar-widget-body">
                                     <div class="compare-report">
                                         <p>You have no <span>item(s)</span> to compare</p>
                                     </div>
-                                    <!-- /.compare-report -->
                                 </div>
-                                <!-- /.sidebar-widget-body -->
                             </div>
-                            <!-- /.sidebar-widget -->
-                            <!-- ============================================== COMPARE: END ============================================== -->
-
-
-                            <!-- == ====== PRODUCT TAGS ==== ======= -->
                             @include('frontend.common.product_tags')
-                            <!-- /.sidebar-widget -->
-                            <!-- == ====== END PRODUCT TAGS ==== ======= -->
-
-
-
-
-
-
-                            <!----------- Testimonials------------->
-
-                            @include('frontend.common.testimonials')
-                            <!-- == ========== Testimonials: END ======== ========= -->
-
-
                         </div>
                         <!-- /.sidebar-filter -->
                     </div>
@@ -247,11 +170,6 @@
                 </div>
                 <!-- /.sidebar -->
                 <div class='col-md-9'>
-
-
-
-                    <!-- == ==== SECTION – HERO === ====== -->
-
                     <div id="category" class="category-carousel hidden-xs">
                         <div class="item">
                             <div class="image"> <img
@@ -269,11 +187,6 @@
                             <!-- /.container-fluid -->
                         </div>
                     </div>
-
-
-
-
-
                     <div class="clearfix filters-container m-t-10">
                         <div class="row">
                             <div class="col col-sm-6 col-md-2">
@@ -348,10 +261,6 @@
                         </div>
                         <!-- /.row -->
                     </div>
-
-
-                    <!--    //////////////////// START Product Grid View  ////////////// -->
-
                     <div class="search-result-container ">
                         <div id="myTabContent" class="tab-content category-list">
                             <div class="tab-pane active " id="grid-container">
@@ -448,34 +357,12 @@
                                             </div>
                                             <!-- /.item -->
                                         @endforeach
-
-
-
-
-
-
-
-
-
-
-
                                     </div>
                                     <!-- /.row -->
                                 </div>
                                 <!-- /.category-product -->
 
                             </div>
-                            <!-- /.tab-pane -->
-
-                            <!--            //////////////////// END Product Grid View  ////////////// -->
-
-
-
-
-                            <!--            //////////////////// Product List View Start ////////////// -->
-
-
-
                             <div class="tab-pane " id="list-container">
                                 <div class="category-product">
 
@@ -583,26 +470,11 @@
                                         </div>
                                         <!-- /.category-product-inner -->
                                     @endforeach
-
-
-
-                                    <!--            //////////////////// Product List View END ////////////// -->
-
-
-
-
-
-
-
-
                                 </div>
                                 <!-- /.category-product -->
                             </div>
                             <!-- /.tab-pane #list-container -->
                         </div>
-                        <!-- /.tab-content -->
-
-
 
                         {{ $products->appends($_GET)->links('vendor.pagination.custom') }}
 
@@ -615,8 +487,6 @@
                 </div>
                 <!-- /.col -->
             </div>
-            <!-- /.row -->
-            <!-- ============================================== BRANDS CAROUSEL ============================================== -->
             <div id="brands-carousel" class="logo-slider wow fadeInUp">
                 <div class="logo-slider-inner">
                     <div id="brand-slider" class="owl-carousel brand-slider custom-carousel owl-theme">
@@ -675,9 +545,6 @@
                 <!-- /.logo-slider-inner -->
 
             </div>
-            <!-- /.logo-slider -->
-            <!-- ============================================== BRANDS CAROUSEL : END ============================================== -->
-
 
         </form>
 

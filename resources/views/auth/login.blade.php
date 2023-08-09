@@ -39,17 +39,6 @@
                                     </span>
                                 @enderror
                             </div>
-                            @if (isset($guard) == 'admin')
-                                <label class="info-title" for="secret_code">Secrat Code <span>*</span></label>
-                                <input type="password" id="password" name="secret_code"
-                                    class="form-control unicase-form-control text-input" id="exampleInputPassword1"
-                                    required>
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            @endif
                             <div class="radio outer-xs">
                                 <label>
                                     <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Remember
