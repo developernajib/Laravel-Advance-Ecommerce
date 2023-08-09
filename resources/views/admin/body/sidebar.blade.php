@@ -1,14 +1,14 @@
 @php
-$prefix = Request::route()->getPrefix();
-$route = Route::current()->getName();
-
+    $prefix = Request::route()->getPrefix();
+    $route = Route::current()->getName();
+    
 @endphp
 
 <aside class="main-sidebar">
     <section class="sidebar">
         <div class="user-profile">
             <div class="ulogo">
-                <a href="index.html">
+                <a href="/">
                     <div class="d-flex align-items-center justify-content-center">
                         <img src="{{ asset('backend/images/logo-dark.png') }}" alt="">
                         <h3><b>E-</b>Zone</h3>
@@ -29,68 +29,6 @@ $route = Route::current()->getName();
                     <span>Profile</span>
                 </a>
             </li>
-            @php
-                $brands =
-                    auth()
-                        ->guard('admin')
-                        ->user()->brand == 1;
-                $category =
-                    auth()
-                        ->guard('admin')
-                        ->user()->category == 1;
-                $product =
-                    auth()
-                        ->guard('admin')
-                        ->user()->product == 1;
-                $slider =
-                    auth()
-                        ->guard('admin')
-                        ->user()->slider == 1;
-                $coupons =
-                    auth()
-                        ->guard('admin')
-                        ->user()->coupons == 1;
-                $shipping =
-                    auth()
-                        ->guard('admin')
-                        ->user()->shipping == 1;
-                $blog =
-                    auth()
-                        ->guard('admin')
-                        ->user()->blog == 1;
-                $setting =
-                    auth()
-                        ->guard('admin')
-                        ->user()->setting == 1;
-                $returnorder =
-                    auth()
-                        ->guard('admin')
-                        ->user()->returnorder == 1;
-                $review =
-                    auth()
-                        ->guard('admin')
-                        ->user()->review == 1;
-                $orders =
-                    auth()
-                        ->guard('admin')
-                        ->user()->orders == 1;
-                $stock =
-                    auth()
-                        ->guard('admin')
-                        ->user()->stock == 1;
-                $reports =
-                    auth()
-                        ->guard('admin')
-                        ->user()->reports == 1;
-                $alluser =
-                    auth()
-                        ->guard('admin')
-                        ->user()->alluser == 1;
-                $adminuserrole =
-                    auth()
-                        ->guard('admin')
-                        ->user()->adminuserrole == 1;
-            @endphp
 
             <li class="treeview {{ $prefix == '/brand' ? 'active' : '' }}  ">
                 <a href="#">
@@ -195,27 +133,6 @@ $route = Route::current()->getName();
                 </ul>
             </li>
 
-            <li class="treeview {{ $prefix == '/blog' ? 'active' : '' }}  ">
-                <a href="#">
-                    <i data-feather="file"></i>
-                    <span>Manage Blog</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-right pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li class="{{ $route == 'blog.category' ? 'active' : '' }}"><a
-                            href="{{ route('blog.category') }}"><i class="ti-more"></i>Blog Category</a></li>
-
-                    <li class="{{ $route == 'list.post' ? 'active' : '' }}"><a href="{{ route('list.post') }}"><i
-                                class="ti-more"></i>List Blog Post</a></li>
-
-                    <li class="{{ $route == 'add.post' ? 'active' : '' }}"><a href="{{ route('add.post') }}"><i
-                                class="ti-more"></i>Add Blog Post</a></li>
-
-                </ul>
-            </li>
-
             <li class="treeview {{ $prefix == '/setting' ? 'active' : '' }}  ">
                 <a href="#">
                     <i data-feather="file"></i>
@@ -228,8 +145,8 @@ $route = Route::current()->getName();
                     <li class="{{ $route == 'site.setting' ? 'active' : '' }}"><a
                             href="{{ route('site.setting') }}"><i class="ti-more"></i>Site Setting</a></li>
 
-                    <li class="{{ $route == 'seo.setting' ? 'active' : '' }}"><a
-                            href="{{ route('seo.setting') }}"><i class="ti-more"></i>Seo Setting</a></li>
+                    <li class="{{ $route == 'seo.setting' ? 'active' : '' }}"><a href="{{ route('seo.setting') }}"><i
+                                class="ti-more"></i>Seo Setting</a></li>
 
 
                 </ul>
@@ -328,23 +245,6 @@ $route = Route::current()->getName();
 
                 </ul>
             </li>
-
-            <li class="treeview {{ $prefix == '/reports' ? 'active' : '' }}  ">
-                <a href="#">
-                    <i data-feather="file"></i>
-                    <span>All Reports </span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-right pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li class="{{ $route == 'all-reports' ? 'active' : '' }}"><a
-                            href="{{ route('all-reports') }}"><i class="ti-more"></i>All Reports</a></li>
-
-
-                </ul>
-            </li>
-
             <li class="treeview {{ $prefix == '/alluser' ? 'active' : '' }}  ">
                 <a href="#">
                     <i data-feather="file"></i>
@@ -356,8 +256,6 @@ $route = Route::current()->getName();
                 <ul class="treeview-menu">
                     <li class="{{ $route == 'all-users' ? 'active' : '' }}"><a href="{{ route('all-users') }}"><i
                                 class="ti-more"></i>All Users</a></li>
-
-
                 </ul>
             </li>
 
@@ -373,8 +271,6 @@ $route = Route::current()->getName();
                     <li class="{{ $route == 'all.admin.user' ? 'active' : '' }}"><a
                             href="{{ route('all.admin.user') }}"><i class="ti-more"></i>All Admin User </a>
                     </li>
-
-
                 </ul>
             </li>
         </ul>

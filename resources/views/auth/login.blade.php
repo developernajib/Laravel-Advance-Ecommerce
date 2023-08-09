@@ -39,17 +39,6 @@
                                     </span>
                                 @enderror
                             </div>
-                            @if (isset($guard) == 'admin')
-                                <label class="info-title" for="secret_code">Secrat Code <span>*</span></label>
-                                <input type="password" id="password" name="secret_code"
-                                    class="form-control unicase-form-control text-input" id="exampleInputPassword1"
-                                    required>
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            @endif
                             <div class="radio outer-xs">
                                 <label>
                                     <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Remember
@@ -61,9 +50,7 @@
                             <button type="submit" class="btn-upper btn btn-primary checkout-page-button">Login</button>
                         </form>
                         <div class="social-sign-in outer-top-xs text-center">
-                            <a href="#" class="facebook-sign-in"><i class="fa fa-facebook"></i> Sign In with
-                                Facebook</a>
-                            <a href="#" class="twitter-sign-in"><i class="fa fa-twitter"></i> Sign In with Twitter</a>
+                            <a href="{{ route('register') }}" class="facebook-sign-in">Register</a>
                         </div>
                     </div>
                 </div>

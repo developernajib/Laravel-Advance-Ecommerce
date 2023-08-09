@@ -138,53 +138,20 @@
                                     <li><a href="#">Teal</a></li>
                                 </ul>
                             </div>
-                            <!-- /.sidebar-widget-body -->
                         </div>
-                        <!-- /.sidebar-widget -->
-                        <!-- ============================================== COLOR: END ============================================== -->
-                        <!-- == ======= COMPARE==== ==== -->
                         <div class="sidebar-widget wow fadeInUp outer-top-vs">
                             <h3 class="section-title">Compare products</h3>
                             <div class="sidebar-widget-body">
                                 <div class="compare-report">
                                     <p>You have no <span>item(s)</span> to compare</p>
                                 </div>
-                                <!-- /.compare-report -->
                             </div>
-                            <!-- /.sidebar-widget-body -->
                         </div>
-                        <!-- /.sidebar-widget -->
-                        <!-- ============================================== COMPARE: END ============================================== -->
-
-
-                        <!-- == ====== PRODUCT TAGS ==== ======= -->
                         @include('frontend.common.product_tags')
-                        <!-- /.sidebar-widget -->
-                        <!-- == ====== END PRODUCT TAGS ==== ======= -->
-
-
-
-
-
-
-                        <!----------- Testimonials------------->
-
-                        @include('frontend.common.testimonials')
-                        <!-- == ========== Testimonials: END ======== ========= -->
-
-
                     </div>
-                    <!-- /.sidebar-filter -->
                 </div>
-                <!-- /.sidebar-module-container -->
             </div>
-            <!-- /.sidebar -->
             <div class='col-md-9'>
-
-
-
-                <!-- == ==== SECTION – HERO === ====== -->
-
                 <div id="category" class="category-carousel hidden-xs">
                     <div class="item">
                         <div class="image"> <img src="{{ asset('frontend/assets/images/banners/cat-banner-1.jpg') }}"
@@ -196,9 +163,7 @@
                                 <div class="excerpt-normal hidden-sm hidden-md"> Lorem ipsum dolor sit amet, consectetur
                                     adipiscing elit </div>
                             </div>
-                            <!-- /.caption -->
                         </div>
-                        <!-- /.container-fluid -->
                     </div>
                 </div>
 
@@ -223,9 +188,7 @@
                                                 class="icon fa fa-th-list"></i>List</a></li>
                                 </ul>
                             </div>
-                            <!-- /.filter-tabs -->
                         </div>
-                        <!-- /.col -->
                         <div class="col col-sm-12 col-md-6">
                             <div class="col col-sm-3 col-md-6 no-padding">
                                 <div class="lbl-cnt"> <span class="lbl">Sort by</span>
@@ -280,12 +243,7 @@
                         </div>
                         <!-- /.col -->
                     </div>
-                    <!-- /.row -->
                 </div>
-
-
-                <!--    //////////////////// START Product Grid View  ////////////// -->
-
                 <div class="search-result-container ">
                     <div id="myTabContent" class="tab-content category-list">
                         <div class="tab-pane active " id="grid-container">
@@ -295,44 +253,17 @@
 
                                     @include('frontend.product.grid_view_product')
 
-
-
                                 </div>
                                 <!-- /.row -->
                             </div>
-                            <!-- /.category-product -->
-
                         </div>
-                        <!-- /.tab-pane -->
-
-                        <!--            //////////////////// END Product Grid View  ////////////// -->
-
-
-
-
-                        <!--            //////////////////// Product List View Start ////////////// -->
-
-
-
                         <div class="tab-pane " id="list-container">
                             <div class="category-product" id="list_view_product">
 
-
-
                                 @include('frontend.product.list_view_product')
 
-
-
-                                <!--            //////////////////// Product List View END ////////////// -->
-
-
-
-
-
                             </div>
-                            <!-- /.category-product -->
                         </div>
-                        <!-- /.tab-pane #list-container -->
                     </div>
                     <!-- /.tab-content -->
                     <div class="clearfix filters-container">
@@ -348,30 +279,12 @@
                         <!-- /.text-right -->
 
                     </div>
-                    <!-- /.filters-container -->
-
                 </div>
-                <!-- /.search-result-container -->
-
             </div>
-            <!-- /.col -->
-
-
-
-
             <div class="ajax-loadmore-product text-center" style="display: none;">
                 <img src="{{ asset('frontend/assets/images/loader.svg') }}" style="width: 120px; height: 120px;">
-
             </div>
-
-
-
-
-
-
         </div>
-        <!-- /.row -->
-        <!-- ============================================== BRANDS CAROUSEL ============================================== -->
         <div id="brands-carousel" class="logo-slider wow fadeInUp">
             <div class="logo-slider-inner">
                 <div id="brand-slider" class="owl-carousel brand-slider custom-carousel owl-theme">
@@ -427,11 +340,7 @@
                 </div>
                 <!-- /.owl-carousel #logo-slider -->
             </div>
-            <!-- /.logo-slider-inner -->
-
         </div>
-        <!-- /.logo-slider -->
-        <!-- ============================================== BRANDS CAROUSEL : END ============================================== -->
     </div>
     <!-- /.container -->
 
@@ -468,7 +377,6 @@
 
     }
 
-
     var page = 1;
     $(window).scroll(function() {
         if ($(window).scrollTop() + $(window).height() >= $(document).height()) {
@@ -478,9 +386,4 @@
 
     });
 </script>
-
-
-
-
-
 @endsection

@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-{{-- @php
-$seo = App\Models\Seo::find(1);
-@endphp --}}
+@php
+    $seo = App\Models\Seo::find(1);
+@endphp
 
 <head>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    {{-- <meta name="description" content="{{ $seo->meta_description }}">
+    <meta name="description" content="{{ $seo->meta_description }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="author" content="{{ $seo->meta_author }}">
-    <meta name="keywords" content="{{ $seo->meta_keyword }}"> --}}
+    <meta name="keywords" content="{{ $seo->meta_keyword }}">
     <meta name="robots" content="all">
-    {{-- <script>
+    <script>
         {{ $seo->google_analytics }}
-    </script> --}}
+    </script>
 
     <title>@yield('title', 'E-Zone | Happy Shopping')</title>
 
@@ -799,6 +799,57 @@ $seo = App\Models\Seo::find(1);
 
         }
     </script>
+    
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('select[name="division_id"]').on('change', function() {
+            var division_id = $(this).val();
+            if (division_id) {
+                $.ajax({
+                    url: "{{ url('/district-get/ajax') }}/" + division_id,
+                    type: "GET",
+                    dataType: "json",
+                    success: function(data) {
+                        $('select[name="state_id"]').empty();
+                        var d = $('select[name="district_id"]').empty();
+                        $.each(data, function(key, value) {
+                            $('select[name="district_id"]').append(
+                                '<option value="' + value.id + '">' + value
+                                .district_name + '</option>');
+                        });
+                    },
+                });
+            } else {
+                alert('danger');
+            }
+        });
+
+
+
+        $('select[name="district_id"]').on('change', function() {
+            var district_id = $(this).val();
+            if (district_id) {
+                $.ajax({
+                    url: "{{ url('/state-get/ajax') }}/" + district_id,
+                    type: "GET",
+                    dataType: "json",
+                    success: function(data) {
+                        var d = $('select[name="state_id"]').empty();
+                        $.each(data, function(key, value) {
+                            $('select[name="state_id"]').append('<option value="' +
+                                value.id + '">' + value.state_name + '</option>'
+                                );
+                        });
+                    },
+                });
+            } else {
+                alert('danger');
+            }
+        });
+
+
+    });
+</script>
 
 </body>
 

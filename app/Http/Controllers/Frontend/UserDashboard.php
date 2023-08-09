@@ -239,7 +239,7 @@ class UserDashboard extends Controller{
     	if (Session::has('coupon')) {
     		$total_amount = Session::get('coupon')['total_amount'];
     	}else{
-    		$total_amount = round(Cart::total());
+    		$total_amount = round((int)Cart::total());
     	}
  
         $order_id = Order::insertGetId([

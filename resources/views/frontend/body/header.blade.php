@@ -49,8 +49,8 @@
                     @php
                         $setting = App\Models\SiteSetting::find(1);
                     @endphp
-                    {{-- <div class="logo"> <a href="{{ url('/') }}"> <img src="{{ asset($setting->logo) }}"
-                                alt="logo"> </a> </div> --}}
+                    <div class="logo"> <a href="{{ url('/') }}"> <img src="{{ asset($setting->logo) }}"
+                                alt="logo"> </a> </div>
                     <!-- /.logo -->
                 </div>
                 <!-- /.logo-holder -->
@@ -195,13 +195,6 @@
                                                             </div>
                                                             <!-- /.col -->
                                                         @endforeach
-                                                        <!-- // End SubCategory Foreach -->
-                                                        {{-- <div class="col-xs-12 col-sm-6 col-md-4 col-menu banner-image">
-                                                            <img class="img-responsive"
-                                                                src="{{ asset('frontend/assets/images/banners/top-menu-banner.jpg') }}"
-                                                                alt="">
-                                                        </div> --}}
-                                                        <!-- /.yamm-content -->
                                                     </div>
                                                 </div>
                                             </li>
@@ -211,8 +204,6 @@
                                 <li> <a href="{{ route('shop.page') }}">Shop</a> </li>
                                 <li class="dropdown  navbar-right special-menu"> <a href="#">Todays offer</a>
                                 </li>
-                                <li class="dropdown  navbar-right special-menu"> <a
-                                        href="{{ route('home.blog') }}">Blog</a> </li>
                             </ul>
                             <!-- /.navbar-nav -->
                             <div class="clearfix"></div>
