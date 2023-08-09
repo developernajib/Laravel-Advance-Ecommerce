@@ -83,6 +83,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
             <div class="col-xs-12 col-sm-12 col-md-9 homebanner-holder">
                 <div id="hero">
@@ -160,8 +161,8 @@
                                                                         onclick="productView(this.id)"> Add to Cart
                                                                     </button>
 
-                                                                </li>
 
+                                                                </li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -235,7 +236,6 @@
                                                                             Cart</i>
                                                                         </button>
                                                                     </li>
-
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -257,12 +257,14 @@
                 <h2 class="text-center" style="margin-bottom: 50px">All Products</h2>
                 <div class="row">
                     @foreach ($data as $product)
+                    
                         <div class="col-lg-2 col-md-3 col-sm-6">
                             <div style="position: absolute">
                                 @if ($product->discount_price == null)
                                     <div class="tag new"><span>new</span></div>
                                 @else
                                     <div class="tag hot"><span>{{ round($discount) }}%</span></div>
+
                                 @endif
                             </div>
                             <div class="product-item">
@@ -270,7 +272,6 @@
                                     href="{{ url('product/details/' . $product->id . '/' . $product->product_slug_en) }}"><img
                                         style="height:250px;width:95%;" src="{{ $product->product_thambnail }}"
                                         alt=""></a>
-
                                 <div class="down-content" style="margin-bottom:30px;">
                                     <a href={{ $product->id }}>
                                         <h4>{{ $product->product_name_en }}</h4>

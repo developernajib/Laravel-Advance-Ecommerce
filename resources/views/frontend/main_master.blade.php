@@ -2,6 +2,7 @@
 <html lang="en">
 @php
     $seo = App\Models\Seo::find(1);
+
 @endphp
 
 <head>

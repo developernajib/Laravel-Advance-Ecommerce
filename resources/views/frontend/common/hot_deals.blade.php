@@ -72,10 +72,6 @@
             </div>
         @endforeach <!-- // end hot deals foreach -->
 
-
-
-
-
     </div>
     <!-- /.sidebar-widget -->
 </div>

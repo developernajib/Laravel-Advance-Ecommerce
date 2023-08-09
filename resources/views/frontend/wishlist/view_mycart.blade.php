@@ -36,7 +36,21 @@
                                 </tr>
                             </thead><!-- /thead -->
                             <tbody id="cartPage">
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">
+										<img src="{{ asset('/upload/products/thambnail/1740250181275645.jpg') }}"
+                                            style="width: 100px; height: 150px;">
+									</td>
+									<td class="text-center">Yamaha MT 15</td>
+									<td class="text-center">Red</td>
+									<td class="text-center"></td>
+									<td class="text-center">1</td>
+									<td class="text-center">3299</td>
+									<td class="text-center" style="cursor: pointer">X</td>
 
+                                </tr>
+                            </tbody>
                             </tbody>
                         </table>
                     </div>
@@ -76,6 +90,7 @@
                         </table>
                     @endif
                 </div>
+
                 <div class="col-md-4 col-sm-12 cart-shopping-total">
                     <table class="table">
                         <thead id="couponCalField">
@@ -94,6 +109,7 @@
                 </div>
             </div>
         </div>
+
         <br>
         @include('frontend.body.brands')
     </div>

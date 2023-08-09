@@ -46,12 +46,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
-                    @php
+                    {{-- @php
                         $setting = App\Models\SiteSetting::find(1);
                     @endphp
                     <div class="logo"> <a href="{{ url('/') }}"> <img src="{{ asset($setting->logo) }}"
                                 alt="logo"> </a> </div>
-                    <!-- /.logo -->
+                    <!-- /.logo --> --}}
+                    
                 </div>
                 <!-- /.logo-holder -->
                 <div class="col-xs-12 col-sm-12 col-md-7 top-search-holder">

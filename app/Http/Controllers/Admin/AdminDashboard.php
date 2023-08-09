@@ -159,10 +159,12 @@ class AdminDashboard extends Controller
         if ($request->file('brand_image')) {
             unlink($old_img);
             $image = $request->file('brand_image');
+
             $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
             Image::make($image)->resize(300, 300)->save('upload/brand/' . $name_gen);
 
             $save_url = 'upload/brand/' . $name_gen;
+
             Brand::findOrFail($brand_id)->update([
                 'brand_name_en' => $request->brand_name_en,
                 'brand_slug_en' => strtolower(str_replace(' ', '-', $request->brand_name_en)),
@@ -804,23 +806,22 @@ class AdminDashboard extends Controller
             'type' => 2,
             'profile_photo_path' => $save_url,
             'created_at' => Carbon::now(),
-        ]);
-        $notification = array(
-            'message' => 'Admin User Created Successfully',
-            'alert-type' => 'success'
-        );
-        return redirect()->route('all.admin.user')->with($notification);
+    	]);
+	    $notification = array(
+			'message' => 'Admin User Created Successfully',
+			'alert-type' => 'success'
+		);
+		return redirect()->route('all.admin.user')->with($notification);
     }
-    public function EditAdminRole($id)
-    {
-        $adminuser = Admin::findOrFail($id);
-        return view('backend.role.admin_role_edit', compact('adminuser'));
+    public function EditAdminRole($id){
+    	$adminuser = Admin::findOrFail($id);
+    	return view('backend.role.admin_role_edit',compact('adminuser'));
     }
-    public function UpdateAdminRole(Request $request)
-    {
-        $admin_id = $request->id;
-        $old_img = $request->old_image;
-        if ($request->file('profile_photo_path')) {
+    public function UpdateAdminRole(Request $request){
+    	$admin_id = $request->id;
+    	$old_img = $request->old_image;
+    	if ($request->file('profile_photo_path')) {
+
             $image = $request->file('profile_photo_path');
             $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
             Image::make($image)->resize(225, 225)->save('upload/admin_images/' . $name_gen);
@@ -926,6 +927,7 @@ class AdminDashboard extends Controller
             'coupon_name' => strtoupper($request->coupon_name),
             'coupon_discount' => $request->coupon_discount,
             'coupon_validity' => $request->coupon_validity,
+
             'created_at' => Carbon::now(),
         ]);
         $notification = array(
